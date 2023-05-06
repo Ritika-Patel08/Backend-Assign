@@ -6,7 +6,7 @@ const app =express();
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(cors())
-
+const port= process.env.PORT || 3000;
 app.get("/",cors(),(req,res)=>{
 
 })
@@ -83,6 +83,6 @@ app.post('/submit', async (req, res) => {
   });
 
 
-app.listen(4000,()=>{
+app.listen(port,()=>{
     console.log("port is running");
 });
